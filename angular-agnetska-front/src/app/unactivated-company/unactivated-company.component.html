@@ -1,0 +1,32 @@
+<div class="header">
+  </div>
+  
+  <div class="topnav">
+    <a href="/unactivated-company">Home</a>
+    <a href="/home">Log out</a>
+  
+  </div>
+  <body>
+      <div class="page">
+        <mat-table mat-table [dataSource]="data">
+                 <ng-container matColumnDef="Name">
+                    <th mat-header-cell *matHeaderCellDef> Name </th>
+                    <td mat-cell *matCellDef="let company">{{company.name}}</td>
+                  </ng-container>
+                  <ng-container matColumnDef="Phone">
+                    <th mat-header-cell *matHeaderCellDef> Contact </th>
+                    <td mat-cell *matCellDef="let company">{{company.phone}} </td>
+                  </ng-container>
+                  <ng-container matColumnDef="Button">
+                    <th mat-header-cell *matHeaderCellDef> Button </th>
+    
+                    <td mat-cell *matCellDef="let company"><button mat-raised-button color="primary" (click)="activateCompany(company.id)">Activate</button>
+                    </td>
+                  </ng-container>
+                
+                
+                  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+            </mat-table>
+        </div>
+    </body>

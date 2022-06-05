@@ -1,0 +1,63 @@
+<div class="header">
+  </div>
+  
+  <div class="topnav">
+    <a href="/user-home-page">Home</a>
+    <a href="/create-company">Create company</a>
+    <a href="/home">Log out</a>
+  
+  </div>
+  <div class="page"> 
+      <mat-card>
+        <mat-card-content>
+          <form [formGroup]="form" (ngSubmit)="onSubmit()">
+            <h2>Create Business</h2>
+            <mat-form-field class="full-width-input">
+              <input matInput placeholder="Name" formControlName="name" required>
+              <mat-error>
+                Please provide a valid name
+              </mat-error>
+            </mat-form-field>
+            <mat-form-field class="full-width-input">
+              <input matInput placeholder="Phone" formControlName="phone" required>
+              <mat-error>
+                Please provide a valid phone
+              </mat-error>
+            </mat-form-field>
+              <mat-form-field class="full-width-input">
+                <input matInput placeholder="Address" formControlName="address" required>
+                <mat-error>
+                  Please provide a valid address
+                </mat-error>
+            </mat-form-field>
+            <mat-form-field class="full-width-input">
+              <input matInput placeholder="WorkDescription" formControlName="workDescription" required>
+              <mat-error>
+                Please provide a valid Work Description 
+              </mat-error>
+            </mat-form-field>
+            <mat-form-field class="full-width-input">
+              <input matInput placeholder="CompanyEmail" formControlName="companyEmail" required>
+              <mat-error>
+                Please provide a valid Company email
+              </mat-error>
+            </mat-form-field>   
+            <mat-form-field class="full-width-input">
+                <input matInput placeholder="CultureDescription" formControlName="cultureDescription" required>
+                <mat-error>
+                  Please provide a valid Culture description 
+                </mat-error>
+              </mat-form-field>   
+              <mat-form-field class="full-width-input">
+                <input matInput placeholder="JobPositions" formControlName="jobPositions" required>
+                <mat-error>
+                  Please provide a valid Job positions 
+                </mat-error>
+              </mat-form-field>     
+            <br>
+            <br>
+            <button mat-raised-button color="primary">Create</button>
+          </form>
+        </mat-card-content>
+      </mat-card>
+    </div>
